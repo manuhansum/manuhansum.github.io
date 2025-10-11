@@ -1,4 +1,5 @@
 const myImage = document.querySelector("img");
+const welcomeMessage = "Spread the dog love,";
 
 myImage.addEventListener("click", () => {
   const mySrc = myImage.getAttribute("src");
@@ -18,14 +19,14 @@ function setUserName() {
     setUserName();
   } else {
     localStorage.setItem("name", myName);
-    myHeading.textContent = `Mozilla is cool, ${myName}`;
+    myHeading.textContent = `spread the dog love${myName}`;
   }
 }
 if (!localStorage.getItem("name")) {
   setUserName();
 } else {
   const storedName = localStorage.getItem("name");
-  myHeading.textContent = `Mozilla is cool, ${storedName}`;
+  myHeading.textContent = `spread the dog love${storedName}`;
 }
 myButton.addEventListener("click", () => {
   setUserName();
